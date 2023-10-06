@@ -24,6 +24,10 @@
 >    ```
 >
 > 5. এবার "**jobpau-server**/**app.js**" file এ **express, cors** কে import করে তা দিয়ে **app** বানিয়ে **_app.use()_** method দিয়ে **_cors() & express.json()_** function কে invoke করে তারপর app কে এই file থেকে **export** করে দিয়ে হবে যাতে অন্য file থেকেও এই app টার access পাওয়া যায়
+<<<<<<< HEAD
+=======
+>
+>>>>>>> serverStarterTemplate
 >    1. পাশাপাশি এখানে **_NOT FOUND_** route বানিয়ে দেয়া হয়েছে যাতে যেকোন ভুল লিঙ্ক এ **req** দিলে যাতে **error** না খেয়ে একটা meaningfull message আসে
 >
 >       ```jsx
@@ -39,6 +43,10 @@
 >       });
 >       module.exports = app;
 >       ```
+<<<<<<< HEAD
+=======
+>
+>>>>>>> serverStarterTemplate
 > 6. এবার **jobpau-server** folder এ একটা config নামের folder বানাতে হবে "**jobpau-server**/**config**" তার ভিতরে একটা **_.env_** file বানাতে হবে "**jobpau-server**/config/**config.env**" এবং এই file এ একটা **_PORT_** নামের environment variable বানাতে হবে
 >
 >    ```jsx
@@ -46,6 +54,10 @@
 >    ```
 >
 > 7. এবার "**jobpau-server**/**index.js**" file এ **app, dotenv** কে import করে নিতে হবে, তারপর **_dotenv_** কে file এর সাথে connect করে নিতে হবে (_line: 4_) এবং **_app.listen()_** method দিয়ে একটা server establish করতে হবেএবার **jobpau-server** folder এ একটা config নামের folder বানাতে হবে "**jobpau-server**/**config**" তার ভিতরে একটা **_.env_** file বানাতে হবে "**jobpau-server**/config/**config.env**" এবং এই file এ একটা **_PORT_** নামের environment variable বানাতে হবে
+<<<<<<< HEAD
+=======
+>
+>>>>>>> serverStarterTemplate
 >    1. { path: "config/config.env" } correct
 >    2. { path: "/config/config.env" } incorrect
 >
@@ -60,6 +72,10 @@
 >         );
 >       });
 >       ```
+<<<<<<< HEAD
+=======
+>
+>>>>>>> serverStarterTemplate
 > 8. 1. এবার nodemon দিয়ে server কে run করার জন্য **_start & start-dev_** script add করতে হবে "**jobpau-server**/**package.json**" file এ
 >
 >    ```jsx
@@ -127,10 +143,18 @@
 >
 >       module.exports = router;
 >       ```
+<<<<<<< HEAD
+=======
+>
+>>>>>>> serverStarterTemplate
 > 5. 1. এবার "**jobpau-server**/**app.js**" file এ **testRoutes** variable কে import করে তারপর **_app.use()_** method দিয়ে **commonURL & usersRoutes** সহ invoke করতে হবে।
 >    1. _এই **commonURL** সব সময় url এর সাথে fixed থাকে_
 >    1. এখানে **commonURL** হচ্ছে **"_/api/v1_"**
 > 6. http://localhost:5000/api/v1/test _থাকে link এ ঢুকে আমাদের api ঠিক আছে কিনা চেক করে নিব_
+<<<<<<< HEAD
+=======
+>
+>>>>>>> serverStarterTemplate
 >    1. যদি api ঠিক থাকে তাহলে নিচের মত দেখাবে
 >
 >       ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d9e2ba8-83b7-45af-9811-f07fb6a7a7e2/f20e0203-0f49-48cc-bc6e-fb36ebb10e4e/Untitled.png)
@@ -140,17 +164,33 @@
 > **steps:**
 >
 > 1. MongoDB Compass open করে তা connect করতে হবে
+<<<<<<< HEAD
 >    1. **mongodb://localhost:27017/** এই link এই connect করতে হবে শেষে কোন **“/jobpau”** দেয়া যাবে না
 >
 >       ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d9e2ba8-83b7-45af-9811-f07fb6a7a7e2/a3f9cdb0-3c96-4b00-bc8a-18c7144cae72/Untitled.png)
 > 2. প্রথমে "**jobpau-server**/config/**config.env**" file এ **_DB_URI_** নামের আরো একটা environment variable বানাতে হবে
+=======
+>
+>    1. **mongodb://localhost:27017/** এই link এই connect করতে হবে শেষে কোন **“/jobpau”** দেয়া যাবে না
+>
+>       ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/7d9e2ba8-83b7-45af-9811-f07fb6a7a7e2/a3f9cdb0-3c96-4b00-bc8a-18c7144cae72/Untitled.png)
+>
+> 2. প্রথমে "**jobpau-server**/config/**config.env**" file এ **_DB_URI_** নামের আরো একটা environment variable বানাতে হবে
+>
+>>>>>>> serverStarterTemplate
 >    1. এই **_DB_URI_** টা **MongoCompass** এর জন্য কেবল অর্থাৎ যখন direct **mongoDB** তে **database connenct** করা হবে তখন কিন্তু এইটাকে change করে **mongoDB** database এর **_DB_URI_** ব্যবহার করতে হবে
 >
 >       ```jsx
 >       PORT = 5000;
 >       DB_URI = "mongodb://localhost:27017/jobpau";
 >       ```
+<<<<<<< HEAD
 > 3. Database connect করার জন্য "**jobpau-server**/config/**database.js**" নামের একটা file বানাতে হবে, তারপর সেখানে **mongoose** কে import করে নিতে হবে, এবার **connectDatabase** function এ নিচে দেখানো code এর মত করে **database connect** করে সবার নিচে **connectDatabase** কে এখান থেকে export করে দিতে হবে
+=======
+>
+> 3. Database connect করার জন্য "**jobpau-server**/config/**database.js**" নামের একটা file বানাতে হবে, তারপর সেখানে **mongoose** কে import করে নিতে হবে, এবার **connectDatabase** function এ নিচে দেখানো code এর মত করে **database connect** করে সবার নিচে **connectDatabase** কে এখান থেকে export করে দিতে হবে
+>
+>>>>>>> serverStarterTemplate
 >    1. তবে মনে রাখতে হবে বর্তমান version এ **_useCreateIndex: true_** লিখলে **error\* দেয় তাই এই line টাকে **comment out\*\* করে দিতে হবে
 >
 >       ```jsx
@@ -173,6 +213,10 @@
 >       };
 >       module.exports = connectDatabase;
 >       ```
+<<<<<<< HEAD
+=======
+>
+>>>>>>> serverStarterTemplate
 > 4. এবার "**jobpau-server**/**index.js**" file এ **_connectDatabase_** function কে import করে invoke করে দিতে হবে
 >
 >    ```jsx
@@ -200,6 +244,10 @@
 >
 > 1. এবার backend folder এর ভিতরে "**jobpau-server**/**utils**" folder বানিয়ে তার ভিতরে একটা file বানাতে হবে "**jobpau-server**/**utils**/**errorhander.js**" নামের
 > 2. এবার এখানে আমরা একটা js class generate করব **ErrorHandler** নামের যা inherited হবে node.js এর default **_Error Class_** feature থেকে , এরপর সবার নিচ থেকে **_ErrorHandler_** class টাকে export করে দিবা যাতে অন্যসব file থেকে এর সাহায্যে আমরা প্রয়োজনিয় error generate করতে পারি।
+<<<<<<< HEAD
+=======
+>
+>>>>>>> serverStarterTemplate
 >    1. **ErrorHandler** class এর সাহায্যে আমরা error কে invoke করার সময় যে **agrument** হিসেবে **message** & **statusCode** পাঠাব **constructor** তা recieve করবে।
 >    2. **super** এর সাহায্যে আমরা **parent class অর্থাত "Error"** Class এর যে error-message show করার যে default function আছে তাকে **child-class *ErrorHandler*** এ **inherrit** করেছি
 >    3. এখানে **super** বলতে মূলত **parent class(Error)** এর constructor কে বুঝায়
@@ -218,8 +266,15 @@
 >       }
 >       module.exports = ErrorHandler;
 >       ```
+<<<<<<< HEAD
 > 3. এবার এই erro কে conditionally implement করার জন্য আমাদের একটা **middleware** বানাতে হবে এজন্য, **jobpau-server** folder এর ভিতরে "**jobpau-server**/**middleware**" folder বানিয়ে তার ভিতরে একটা file বানাতে হবে "**jobpau-server**/middleware/**error.js**" নামের
 > 4. এই "**jobpau-server**/middleware/**error.js**" file এ **_ErrorHandler_** কে import করি নিব , তারপর **module.exports** করব একটা **callback** function কে যা চারটি **parameter** নিবে **_err, req, res, next_**
+=======
+>
+> 3. এবার এই erro কে conditionally implement করার জন্য আমাদের একটা **middleware** বানাতে হবে এজন্য, **jobpau-server** folder এর ভিতরে "**jobpau-server**/**middleware**" folder বানিয়ে তার ভিতরে একটা file বানাতে হবে "**jobpau-server**/middleware/**error.js**" নামের
+> 4. এই "**jobpau-server**/middleware/**error.js**" file এ **_ErrorHandler_** কে import করি নিব , তারপর **module.exports** করব একটা **callback** function কে যা চারটি **parameter** নিবে **_err, req, res, next_**
+>
+>>>>>>> serverStarterTemplate
 >    1. এটা মূলত **express.js** এর default error handling method , extra হিসেবে just কিছু **condition** implement করা হয়েছে
 >
 >       ```jsx
@@ -234,6 +289,10 @@
 >       };
 >       module.exports = errorMiddleware;
 >       ```
+<<<<<<< HEAD
+=======
+>
+>>>>>>> serverStarterTemplate
 > 5. এবার "**jobpau-server**/**app.js**" file এ এই **_errorMiddleware_** কে import করে নিব, তারপর **_app.use()_** method এর সাহায্যে সর্ব শেষ middleware হিসেবে **_errorMiddleware_** কে রাখব
 >
 >    1. এটাই মূলত নিয়ম যে, **errorMiddleware** সবার last এ invoke করা থাকে যাতে অন্যকোন একটা middleware এ কোন সমস্যা হলে programm jump করা এই last middleware এ hit করবে তারপর error show করবে
@@ -388,6 +447,10 @@
 >    https://camo.githubusercontent.com/a12e94e182f0e62a70cb25abb832714f2132b44f1dc41f190767c7d1ff1581c3/68747470733a2f2f692e6962622e636f2f4c70516e46506a2f7863762e706e67
 >
 > 5. test success হলে again **jobpau-server\config\config.env** file এর **_DB_URI_** variable এর value ঠিক করে দিব এবং **jobpau-server\config\database.js** এর **.catch()** কে uncomment করে আগের মত ঠিক করে দিব
+<<<<<<< HEAD
+=======
+>
+>>>>>>> serverStarterTemplate
 >    1. **jobpau-server\config\config.env**
 >
 >       ```jsx
