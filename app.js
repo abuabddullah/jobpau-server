@@ -15,11 +15,13 @@ app.use(express.json())
 
 //Route imports
 const testRouter = require("./routes/v1/testRoutes");
+const userRouter = require("./routes/v1/userRoutes/userRoutes");
 
 
 
 //invoking routes
 app.use('/api/v1', testRouter);
+app.use('/api/v1', userRouter);
 
 
 // Not found route
