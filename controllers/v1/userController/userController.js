@@ -21,3 +21,17 @@ exports.getAllUserByAdmin = catchAsyncErrorsMiddleware(
     });
   }
 );
+
+exports.getUserDetailsByEmail = catchAsyncErrorsMiddleware(
+  async (req, res, next) => {
+    const userEmail = req.query.email;
+    const userDetails = await UserModel.findOne({ email: userEmail });
+    if (!userDetails) {
+      return next(new Error("User not found"));
+    }
+    res.status(200).json({
+      success: true,
+      userDetails,
+    });
+  }
+);
